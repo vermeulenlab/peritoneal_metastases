@@ -1,0 +1,17 @@
+cond	pat
+12_2	prim	1
+12_1	pm	1
+25_3	prim	2
+25_1	pm	2
+27_2b	prim	3
+27_1b	pm	3
+28_2b	prim	4
+28_1b	pm	4
+33_3c	prim	5
+33_1b	pm	5
+39_3	prim	6
+39_1	pm	6
+47_3	prim	7
+47_4	pm	7
+49_1	prim	8
+49_2	pm	8
