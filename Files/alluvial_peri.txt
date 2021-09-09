@@ -1,0 +1,4 @@
+colon	peritoneal	freq	color
+CMS4	CMS1	1	cms4
+CMS4	CMS4	5	cms4
+CMS3	CMS4	2	cms3
