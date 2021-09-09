@@ -43,3 +43,12 @@ vsd_54 <- assay(vsd)
 
 sp54 <- plotPCA(vsd_54, intgroup=c("group")) + theme_bw() + geom_text_repel(aes(label=name), size = 2, vjust=2) #vsd_54 was produced by the script 54_study
 sp54 <- sp54 + scale_color_manual(values=c("#cd262f", "#5798c9"))
+
+#CMS Classification of Liver samples
+dat.54study.subset$ENTREID <- mapIds(org.Hs.eg.db,keys=rownamesdat.54study.subset,column="ENTREZID",keytype="SYMBOL",multiVals="first")
+dat.54study.subset = data54_study[!duplicated(dat.54study.subset$ENTREID),]
+dat.54study.subset <- dat.54study.subset[!is.na(dat.54study.subset$ENTREID),]
+row.names(dat.54study.subset) <- dat.54study.subset$ENTREID
+dat.54study.subset$ENTREID <- NULL
+
+Rssp_54study_SSP <- CMSclassifier::classifyCMS(dat.54study.subset, method="SSP")[[3]]
